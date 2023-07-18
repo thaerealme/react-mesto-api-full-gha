@@ -1,0 +1,21 @@
+.profile__image {
+  object-fit: cover;
+  max-width: 120px;
+  max-height: 120px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.profile__image::after {
+  content: '';
+  background-image: url('../../../images/profile/profile__edit-avatar.svg');
+  background-position: center;
+  width: 1000px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 580px) {
+  .profile__image {
+    max-width: 118px;
+  }
+}

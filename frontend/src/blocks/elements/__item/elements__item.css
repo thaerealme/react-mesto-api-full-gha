@@ -1,0 +1,12 @@
+.elements__item {
+  max-width: 282px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+@media screen and (max-width: 618px) {
+  .elements__item:nth-child(1n) {
+    justify-self: center;
+  }
+}

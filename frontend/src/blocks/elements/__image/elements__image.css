@@ -1,0 +1,11 @@
+.elements__image {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  min-height: 282px;
+  max-width: 100%;
+  cursor: pointer;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  aspect-ratio: 1;
+}
