@@ -87,10 +87,12 @@ class Api {
   }
 }
 
+const jwt = localStorage.getItem('jwt');
+
 export const api = new Api({
   baseUrl: 'https://api.thaerealme.nomoredomains.xyz',
   headers: {
-    authorization: '09ce64c0-003b-45c0-9c84-9eae7fed4bad',
+    authorization: `Bearer ${jwt}`,
     'Content-Type': 'application/json'
   }
 });
