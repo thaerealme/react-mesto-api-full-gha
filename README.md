@@ -5,7 +5,7 @@
 
 Адрес репозитория: https://github.com/thaerealme/react-mesto-api-full-gha
 
-## Ссылки на проект
+## Ссылки на проект:
 
 IP 158.160.1.62
 

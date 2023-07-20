@@ -88,11 +88,12 @@ class Api {
 }
 
 const jwt = localStorage.getItem('jwt');
+const testasd = 'test';
 
 export const api = new Api({
   baseUrl: 'https://api.thaerealme.nomoredomains.xyz',
   headers: {
-    authorization: `Bearer ${jwt}`,
+    Authorization: `Bearer ${jwt}`,
     'Content-Type': 'application/json'
   }
 });
