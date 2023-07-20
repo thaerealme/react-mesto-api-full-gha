@@ -8,11 +8,10 @@ module.exports = (req, res, next) => {
     return;
   }
   const token = authorization.replace('Bearer ', '');
-  const isProdEnv = process.env.NODE_ENV === 'production' ? process.env.JWT_SECRET : 'dev-secret';
   let payload;
 
   try {
-    payload = jwt.verify(token, isProdEnv);
+    payload = jwt.verify(token, process.env.NODE_ENV === 'production' ? process.env.JWT_SECRET : 'dev-secret');
   } catch (err) {
     next(new AuthError('Необходимо авторизоваться!'));
     return;
