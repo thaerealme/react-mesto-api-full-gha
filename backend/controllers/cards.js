@@ -2,7 +2,6 @@ const Card = require('../models/card');
 const NotFoundError = require('../errors/not-found-error');
 const InvalidError = require('../errors/invalid-error');
 const AccessError = require('../errors/access-error');
-// const AuthError = require('../errors/auth-error');
 
 module.exports.getCards = (req, res, next) => {
   Card.find({})
@@ -55,7 +54,7 @@ module.exports.likeCard = (req, res, next) => {
     })
     .catch((err) => {
       if (err.name === 'CastError') {
-        next(new InvalidError('Карточка с указанным ID не найдена')); // ?
+        next(new InvalidError('Карточка с указанным ID не найдена'));
       } else {
         next(err);
       }
@@ -76,7 +75,7 @@ module.exports.dislikeCard = (req, res, next) => {
     })
     .catch((err) => {
       if (err.name === 'CastError') {
-        next(new InvalidError('Карточка с указанным ID не найдена')); // ?
+        next(new InvalidError('Карточка с указанным ID не найдена'));
       } else {
         next(err);
       }
