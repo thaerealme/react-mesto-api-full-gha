@@ -88,7 +88,6 @@ class Api {
 }
 
 const jwt = localStorage.getItem('jwt');
-const testasd = 'test';
 
 export const api = new Api({
   baseUrl: 'https://api.thaerealme.nomoredomains.xyz',
